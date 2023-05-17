@@ -13,4 +13,4 @@ for (let index = 0; index < movies.length; index++) {
     }
 }
 
-console.log(shortMovies)
+console.log(longMovies)
