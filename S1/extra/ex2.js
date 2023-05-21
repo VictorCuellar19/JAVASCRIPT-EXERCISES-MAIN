@@ -4,11 +4,13 @@ const foodSchedule = [{name: "Salad", isVegan: true},{name: "Salmon", isVegan: f
 for (let index = 0; index < foodSchedule.length; index++) {
     const food = foodSchedule[index];
     
-    if(!food.isVegan)
+    if(!food.isVegan) {
+        food.name = fruits.shift();}
     
-    {food.name = fruits.shift();
-    
+    if(food.isVegan == false) {
+        food.isVegan = true;    
     }
+    
 }
 
 console.log(foodSchedule);
