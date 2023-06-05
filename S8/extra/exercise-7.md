@@ -1,21 +1,9 @@
-<<<<<<< HEAD
-Utiliza la api `https://ghibliapi.herokuapp.com/films` para hacer un fetch y pintar sus propiedades .image y .title para hacer una galería de las películas.
-=======
-Basandonos en el ejercicio 6 (con tener la parte de llamar a los personajes nos vale pero si lo tenemos todo lo podríamos mezclar y hacer un super mega ultra ejercicio 3000) vamos a crear un formulario para añadir nuevos luchadores al elenco.
+De nuevo vamos a usar JSON SERVER para simular nuestra api en local. Ejecuta ``json-server --watch exercise-7.json`` y obtendremos de la url `http://localhost:3000` los datos del ejercicio.
 
-Para ello añade al html un formulario para añadir los campos:
+En este caso tenemos 2 endpoints, o lo que es lo mismo, dos urls a las que llamar para recibir los datos.
 
-- name (input tipo string)
-- avatar (input tipo string). Me vale con que el usuario ponga una url de internet
-- critic (input tipo number)
-- defense (input tipo number)
-- vitality (input tipo number)
-- damage (input tipo string)
+El endpoint `http://localhost:3000/orders` nos devolverá una lista de pedidos de la tienda Mari & Juan y el endpoint `http://localhost:3000/products` que nos devuelve una lista de productos.
 
-Cuando el usuario le de al botón de guardar del formulario. Obtendremos un objeto con todos los datos introducidos por el usuario y guardaremos este luchador en la base de datos (JSON) enviando el luchador mediante un metodo POST a la url `http://localhost:3000/characters`.
+La intención es pintar todos los pedidos ordenados por fecha (ultimos pedidos al principio) y en los que pongamos tanto los productos que contiene el pedido como la cantidad pedida de cada uno de los productos.
 
-Recuerda tener arrancado el servidor json-server para poder acceder a los personajes.
-
-
-
->>>>>>> 44257c1f97f0195d5ad7d5d683e2c2ca46cb13d5
+Si os fijáis, en el endpoint de los pedidos no tenemos la información del producto, si no su id y cantidad pedida. Para obtener el nombre de los productos tendremos que hacer peticiones al endpoint de productos pasando el id del producto, por ejemplo ``http://localhost:3000/products/2``. De esta forma podremos obtener ya toda la información y pintarla en el html.
